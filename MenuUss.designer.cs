@@ -34,38 +34,28 @@ namespace RetoCntWinforms
             this.Barratitulo = new System.Windows.Forms.Panel();
             this.lbNodo = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
-            this.circularPictureBox1 = new MetroFramework.Demo.CircularPictureBox();
+            this.MenuVertical = new System.Windows.Forms.Panel();
+            this.lbFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Panelcontenedor = new System.Windows.Forms.Panel();
+            this.tmFecha = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.MenuVertical = new System.Windows.Forms.Panel();
-            this.lbFecha = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.RUR = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Panelcontenedor = new System.Windows.Forms.Panel();
-            this.tmFecha = new System.Windows.Forms.Timer(this.components);
-            this.Pruebaa = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuNodos = new MetroFramework.Demo.RJDropdownMenu(this.components);
-            this.MenuUsuarios = new MetroFramework.Demo.RJDropdownMenu(this.components);
+            this.circularPictureBox1 = new RetoCntWinforms.CircularPictureBox();
+            this.MenuUsuarios = new RetoCntWinforms.RJDropdownMenu(this.components);
             this.crearUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Barratitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.MenuVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.Pruebaa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.MenuUsuarios.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,89 +94,17 @@ namespace RetoCntWinforms
             this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombre.Location = new System.Drawing.Point(708, 14);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(65, 20);
+            this.lbNombre.Size = new System.Drawing.Size(64, 20);
             this.lbNombre.TabIndex = 136;
-            this.lbNombre.Text = "Nombre";
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.circularPictureBox1.Image = global::MetroFramework.Demo.Properties.Resources.foto;
-            this.circularPictureBox1.Location = new System.Drawing.Point(648, 2);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(54, 44);
-            this.circularPictureBox1.TabIndex = 135;
-            this.circularPictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MetroFramework.Demo.Properties.Resources.menu1;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 135;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::MetroFramework.Demo.Properties.Resources.maxi;
-            this.button5.Location = new System.Drawing.Point(942, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(18, 18);
-            this.button5.TabIndex = 1;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::MetroFramework.Demo.Properties.Resources.minimizar2;
-            this.button4.Location = new System.Drawing.Point(918, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(18, 18);
-            this.button4.TabIndex = 0;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::MetroFramework.Demo.Properties.Resources.salir2;
-            this.button3.Location = new System.Drawing.Point(963, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(18, 18);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.lbNombre.Text = "Usuario";
             // 
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.MenuVertical.Controls.Add(this.lbFecha);
             this.MenuVertical.Controls.Add(this.lblHora);
-            this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Controls.Add(this.button10);
-            this.MenuVertical.Controls.Add(this.button6);
-            this.MenuVertical.Controls.Add(this.button8);
-            this.MenuVertical.Controls.Add(this.button9);
             this.MenuVertical.Controls.Add(this.button7);
-            this.MenuVertical.Controls.Add(this.RUR);
             this.MenuVertical.Controls.Add(this.pictureBox6);
             this.MenuVertical.Controls.Add(this.button2);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -201,7 +119,7 @@ namespace RetoCntWinforms
             this.lbFecha.AutoSize = true;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbFecha.ForeColor = System.Drawing.Color.White;
-            this.lbFecha.Location = new System.Drawing.Point(8, 475);
+            this.lbFecha.Location = new System.Drawing.Point(8, 369);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.Size = new System.Drawing.Size(224, 20);
             this.lbFecha.TabIndex = 136;
@@ -213,136 +131,11 @@ namespace RetoCntWinforms
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.LightGray;
-            this.lblHora.Location = new System.Drawing.Point(15, 415);
+            this.lblHora.Location = new System.Drawing.Point(15, 309);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(205, 54);
             this.lblHora.TabIndex = 135;
             this.lblHora.Text = "21:49:45";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = global::MetroFramework.Demo.Properties.Resources.cerrarsesion;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 552);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 134;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button10
-            // 
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = global::MetroFramework.Demo.Properties.Resources.grupo;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 310);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(250, 45);
-            this.button10.TabIndex = 133;
-            this.button10.Text = "Usuarios";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = global::MetroFramework.Demo.Properties.Resources.correo_electronico1;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 259);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(250, 45);
-            this.button6.TabIndex = 132;
-            this.button6.Text = "Envío Correo";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button8
-            // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = global::MetroFramework.Demo.Properties.Resources.ambulancia;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 157);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(250, 45);
-            this.button8.TabIndex = 130;
-            this.button8.Text = "SEM";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = global::MetroFramework.Demo.Properties.Resources.notas;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(0, 208);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(250, 45);
-            this.button9.TabIndex = 131;
-            this.button9.Text = "Novedades De Turno";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::MetroFramework.Demo.Properties.Resources.libro_de_medicina;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 106);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(250, 45);
-            this.button7.TabIndex = 129;
-            this.button7.Text = "Bitácora";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // RUR
-            // 
-            this.RUR.FlatAppearance.BorderSize = 0;
-            this.RUR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.RUR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RUR.ForeColor = System.Drawing.Color.White;
-            this.RUR.Image = global::MetroFramework.Demo.Properties.Resources.excel;
-            this.RUR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RUR.Location = new System.Drawing.Point(0, 55);
-            this.RUR.Name = "RUR";
-            this.RUR.Size = new System.Drawing.Size(250, 45);
-            this.RUR.TabIndex = 128;
-            this.RUR.Text = "RUR";
-            this.RUR.UseVisualStyleBackColor = true;
-            this.RUR.Click += new System.EventHandler(this.RUR_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::MetroFramework.Demo.Properties.Resources.logo_aumentado_sin_fondo;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(44, 47);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 127;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // button2
             // 
@@ -356,7 +149,7 @@ namespace RetoCntWinforms
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(250, 45);
             this.button2.TabIndex = 0;
-            this.button2.Text = "SIRYC";
+            this.button2.Text = "RetoCNT";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -373,31 +166,118 @@ namespace RetoCntWinforms
             // 
             this.tmFecha.Tick += new System.EventHandler(this.tmFecha_Tick);
             // 
-            // Pruebaa
+            // pictureBox2
             // 
-            this.Pruebaa.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem});
-            this.Pruebaa.Name = "Pruebaa";
-            this.Pruebaa.Size = new System.Drawing.Size(83, 26);
-            this.Pruebaa.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Pruebaa_ItemClicked);
+            this.pictureBox2.Image = global::RetoCntWinforms.Properties.Resources.menu1;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 135;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // aToolStripMenuItem
+            // button5
             // 
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
-            this.aToolStripMenuItem.Text = "A";
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = global::RetoCntWinforms.Properties.Resources.maxi;
+            this.button5.Location = new System.Drawing.Point(942, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(18, 18);
+            this.button5.TabIndex = 1;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // MenuNodos
+            // button4
             // 
-            this.MenuNodos.IsMainMenu = false;
-            this.MenuNodos.MenuItemHeight = 25;
-            this.MenuNodos.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.MenuNodos.Name = "rjDropdownMenu1";
-            this.MenuNodos.PrimaryColor = System.Drawing.Color.Empty;
-            this.MenuNodos.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MenuNodos.Size = new System.Drawing.Size(61, 4);
-            this.MenuNodos.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuNodos_ItemClicked);
-            this.MenuNodos.Click += new System.EventHandler(this.MenuNodos_Click_1);
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::RetoCntWinforms.Properties.Resources.minimizar2;
+            this.button4.Location = new System.Drawing.Point(918, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(18, 18);
+            this.button4.TabIndex = 0;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::RetoCntWinforms.Properties.Resources.salir2;
+            this.button3.Location = new System.Drawing.Point(963, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(18, 18);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button10
+            // 
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Image = global::RetoCntWinforms.Properties.Resources.prioridad;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(0, 164);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(250, 45);
+            this.button10.TabIndex = 133;
+            this.button10.Text = "Atención por";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = global::RetoCntWinforms.Properties.Resources.grupo;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 90);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(250, 45);
+            this.button7.TabIndex = 129;
+            this.button7.Text = "Pacientes";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::RetoCntWinforms.Properties.Resources.logo_aumentado_sin_fondo;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(44, 47);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 127;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.circularPictureBox1.Image = global::RetoCntWinforms.Properties.Resources.usuario;
+            this.circularPictureBox1.Location = new System.Drawing.Point(648, 2);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(54, 44);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 135;
+            this.circularPictureBox1.TabStop = false;
             // 
             // MenuUsuarios
             // 
@@ -409,20 +289,20 @@ namespace RetoCntWinforms
             this.MenuUsuarios.MenuItemTextColor = System.Drawing.Color.Empty;
             this.MenuUsuarios.Name = "MenuUsuarios";
             this.MenuUsuarios.PrimaryColor = System.Drawing.Color.Empty;
-            this.MenuUsuarios.Size = new System.Drawing.Size(174, 48);
+            this.MenuUsuarios.Size = new System.Drawing.Size(123, 48);
             // 
             // crearUsuarioToolStripMenuItem
             // 
             this.crearUsuarioToolStripMenuItem.Name = "crearUsuarioToolStripMenuItem";
-            this.crearUsuarioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.crearUsuarioToolStripMenuItem.Text = "Crear Usuario";
+            this.crearUsuarioToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.crearUsuarioToolStripMenuItem.Text = "Riesgo";
             this.crearUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearUsuarioToolStripMenuItem_Click);
             // 
             // modificarUsuariosToolStripMenuItem
             // 
             this.modificarUsuariosToolStripMenuItem.Name = "modificarUsuariosToolStripMenuItem";
-            this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.modificarUsuariosToolStripMenuItem.Text = "Modificar Usuarios";
+            this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.modificarUsuariosToolStripMenuItem.Text = "Prioridad";
             this.modificarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.modificarUsuariosToolStripMenuItem_Click);
             // 
             // MenuUss
@@ -441,13 +321,11 @@ namespace RetoCntWinforms
             this.Load += new System.EventHandler(this.Menu_Load);
             this.Barratitulo.ResumeLayout(false);
             this.Barratitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.Pruebaa.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.MenuUsuarios.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -463,25 +341,17 @@ namespace RetoCntWinforms
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button RUR;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbNombre;
         private CircularPictureBox circularPictureBox1;
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer tmFecha;
-        private RJDropdownMenu MenuNodos;
         private System.Windows.Forms.Label lbNodo;
         private RJDropdownMenu MenuUsuarios;
         private System.Windows.Forms.ToolStripMenuItem crearUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarUsuariosToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip Pruebaa;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
     }
 }

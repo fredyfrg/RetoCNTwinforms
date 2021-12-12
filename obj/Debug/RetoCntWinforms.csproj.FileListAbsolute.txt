@@ -5,7 +5,6 @@ C:\Users\FRG\source\repos\RetoCntWinforms\bin\Debug\MetroFramework.Design.dll
 C:\Users\FRG\source\repos\RetoCntWinforms\bin\Debug\MetroFramework.dll
 C:\Users\FRG\source\repos\RetoCntWinforms\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.csproj.AssemblyReference.cache
-C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.Form1.resources
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.Inicio.resources
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.Properties.Resources.resources
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.csproj.GenerateResource.cache
@@ -13,3 +12,4 @@ C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.csproj.CoreC
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.csproj.CopyComplete
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.exe
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.pdb
+C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.MenuUss.resources

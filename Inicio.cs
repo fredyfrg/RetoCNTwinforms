@@ -30,13 +30,13 @@ namespace RetoCntWinforms
                 //circleprogressBar1.Value = circleprogressBar1.Value + 1;
             }
             else
-            { 
-                ////timer1.Enabled = false;                
-                //timer1.Stop();
-                ////this.Hide();
-                //Login iniciosesion = new Login();
-                //iniciosesion.Show();
+            {
+                //timer1.Enabled = false;                
+                timer1.Stop();
                 //this.Hide();
+                MenuUss menu = new MenuUss();
+                menu.Show();
+                this.Hide();
             }
         }
 

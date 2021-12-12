@@ -14,18 +14,14 @@ namespace RetoCntWinforms
 {
     public partial class MenuUss : Form
     {
-        String Codus;
-        Int32 nrol;
-        public MenuUss(String id, Int32 rol)
+
+        public MenuUss()
         {
             InitializeComponent();
-            Codus = id;
-            nrol = rol;
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            lbNombre.Text = basededatos.ConsultanombresUsuario(Codus);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -65,9 +61,7 @@ namespace RetoCntWinforms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            Login log = new Login();
-            log.Show();
+
         }
 
         private void AbrirFormEnPanel(object Formhijo)
@@ -83,23 +77,21 @@ namespace RetoCntWinforms
         }
         private void RUR_Click(object sender, EventArgs e)
         {
-            RUR rur = new RUR(Codus, nrol);
-            rur.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(rur);
-            //AbrirFormEnPanel(new RUR(Codus, nrol));
+            //RUR rur = new RUR(Codus, nrol);
+            //rur.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            //AbrirFormEnPanel(rur);
+            ////AbrirFormEnPanel(new RUR(Codus, nrol));
         }
 
         private void MostrarFormLogo()
         {
-            AbrirFormEnPanel(new Logos());
+            //AbrirFormEnPanel(new Logos());
         }
         private void Menu_Load(object sender, EventArgs e)
         {
             MostrarFormLogo();
             tmFecha.Start();
-            MenuNodos.IsMainMenu = true;
             MenuUsuarios.IsMainMenu = true;
-            MenuNodos.Items.Clear();
             
             //ToolStripMenuItem item,item2, submenu;
             
@@ -156,9 +148,9 @@ namespace RetoCntWinforms
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Historico his = new Historico(Codus, nrol);
-            his.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(his);
+            //Historico his = new Historico(Codus, nrol);
+            //his.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            //AbrirFormEnPanel(his);
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -169,16 +161,16 @@ namespace RetoCntWinforms
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Novedades nov = new Novedades(Codus, nrol);
-            nov.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(nov);
+            //Novedades nov = new Novedades(Codus, nrol);
+            //nov.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            //AbrirFormEnPanel(nov);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            EnvioCorreo env = new EnvioCorreo(Codus, nrol);
-            env.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(env);
+            //EnvioCorreo env = new EnvioCorreo(Codus, nrol);
+            //env.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            //AbrirFormEnPanel(env);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -187,14 +179,14 @@ namespace RetoCntWinforms
             if (MenuVertical.Width == 250)
             {
                 MenuVertical.Width = 50;
-                pictureBox2.Image = global::MetroFramework.Demo.Properties.Resources.menu;
+                pictureBox2.Image = global::RetoCntWinforms.Properties.Resources.menu;
                 lblHora.Visible = false;
                 lbFecha.Visible = false;
             }
             else
             {
                 MenuVertical.Width = 250;
-                pictureBox2.Image = global::MetroFramework.Demo.Properties.Resources.menu1;
+                pictureBox2.Image = global::RetoCntWinforms.Properties.Resources.menu1;
                 lblHora.Visible = true;
                 lbFecha.Visible = true;
             }
@@ -228,30 +220,18 @@ namespace RetoCntWinforms
 
         private void crearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (nrol == 1)
-            {
-                CrearUsuario us = new CrearUsuario(Codus, nrol);
-                us.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-                AbrirFormEnPanel(us);
-            }
-            else
-            {
-                MessageBox.Show("Su usuario no cuenta con permisos para usar este modulo", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                //CrearUsuario us = new CrearUsuario();
+                //us.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+                //AbrirFormEnPanel(us);
+            
         }
 
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (nrol == 1)
-            {
-                ModificarUsuarios us = new ModificarUsuarios(Codus, nrol);
-                us.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-                AbrirFormEnPanel(us);
-            }
-            else
-            {
-                MessageBox.Show("Su usuario no cuenta con permisos para usar este modulo", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+                //ModificarUsuarios us = new ModificarUsuarios(Codus, nrol);
+                //us.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+                //AbrirFormEnPanel(us);           
         }
 
         private void button10_Click(object sender, EventArgs e)
