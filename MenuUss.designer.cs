@@ -1,5 +1,5 @@
 ﻿
-namespace MetroFramework.Demo
+namespace RetoCntWinforms
 {
     partial class MenuUss
     {
