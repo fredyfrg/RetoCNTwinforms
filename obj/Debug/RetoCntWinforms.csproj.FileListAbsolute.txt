@@ -13,3 +13,4 @@ C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.csproj.CopyC
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.exe
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.pdb
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.MenuUss.resources
+C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.Logos.resources

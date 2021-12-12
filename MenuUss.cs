@@ -85,45 +85,13 @@ namespace RetoCntWinforms
 
         private void MostrarFormLogo()
         {
-            //AbrirFormEnPanel(new Logos());
+            AbrirFormEnPanel(new Logos());
         }
         private void Menu_Load(object sender, EventArgs e)
         {
             MostrarFormLogo();
             tmFecha.Start();
             MenuUsuarios.IsMainMenu = true;
-            
-            //ToolStripMenuItem item,item2, submenu;
-            
-            //SqlCommand comando = new SqlCommand(String.Format("select id_lugar as lugar, descripcion from Nodos where nivel = 0;"), basededatos.ObtenerConexion());
-            //SqlDataReader MyReader;
-            //MyReader = comando.ExecuteReader();
-            //while (MyReader.Read())
-            //{
-            //    submenu = new ToolStripMenuItem();
-            //    submenu.Text = MyReader["descripcion"].ToString();
-            //    string cabecera = MyReader["lugar"].ToString();
-            //    SqlCommand comando2 = new SqlCommand(String.Format("select id_lugar as lugar, descripcion from Nodos where nivel=2 and cabecera='"+cabecera+"';"), basededatos.ObtenerConexion());
-            //    SqlDataReader MyReader2;
-            //    MyReader2 = comando2.ExecuteReader();
-            //    while (MyReader2.Read())
-            //    {
-            //        item = new ToolStripMenuItem();
-            //        item.Text = MyReader2["descripcion"].ToString();
-            //        string cabecera2 = MyReader2["lugar"].ToString();
-            //        SqlCommand comando3 = new SqlCommand(String.Format("select id_lugar as lugar, descripcion from Nodos where nivel=1 and cabecera='" + cabecera2 + "';"), basededatos.ObtenerConexion());
-            //        SqlDataReader MyReader3;
-            //        MyReader3 = comando3.ExecuteReader();
-            //        while (MyReader3.Read())
-            //        {
-            //            item2 = new ToolStripMenuItem();
-            //            item2.Text = MyReader3["descripcion"].ToString();
-            //            item.DropDownItems.Add(item2);
-            //        }
-            //        submenu.DropDownItems.Add(item);
-            //    }
-            //    MenuNodos.Items.Add(submenu);
-            //}
         }
 
         private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)

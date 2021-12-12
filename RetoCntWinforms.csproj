@@ -65,6 +65,12 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logos.designer.cs">
+      <DependentUpon>Logos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuColorTable.cs" />
     <Compile Include="MenuRenderer.cs" />
     <Compile Include="MenuUss.cs">
@@ -80,6 +86,9 @@
     </Compile>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logos.resx">
+      <DependentUpon>Logos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUss.resx">
       <DependentUpon>MenuUss.cs</DependentUpon>
@@ -137,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\prioridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoCNTW.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

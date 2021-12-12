@@ -63,6 +63,16 @@ namespace RetoCntWinforms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondoCNTW {
+            get {
+                object obj = ResourceManager.GetObject("fondoCNTW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grupo {
             get {
                 object obj = ResourceManager.GetObject("grupo", resourceCulture);
