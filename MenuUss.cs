@@ -184,7 +184,10 @@ namespace RetoCntWinforms
         }
 
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {           
+        {
+            Prioridad prio = new Prioridad();
+            prio.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(prio);
         }
 
         private void button10_Click(object sender, EventArgs e)
