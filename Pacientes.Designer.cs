@@ -67,6 +67,7 @@ namespace RetoCntWinforms
             this.bt_nuevo.TabIndex = 8;
             this.bt_nuevo.Text = "Nuevo";
             this.bt_nuevo.UseSelectable = true;
+            this.bt_nuevo.Click += new System.EventHandler(this.bt_nuevo_Click);
             // 
             // bt_guardar
             // 
@@ -77,6 +78,7 @@ namespace RetoCntWinforms
             this.bt_guardar.TabIndex = 7;
             this.bt_guardar.Text = "Guardar";
             this.bt_guardar.UseSelectable = true;
+            this.bt_guardar.Click += new System.EventHandler(this.bt_guardar_Click);
             // 
             // bt_editar
             // 
@@ -105,7 +107,7 @@ namespace RetoCntWinforms
             // 
             // 
             this.txt_documento.CustomButton.Image = null;
-            this.txt_documento.CustomButton.Location = new System.Drawing.Point(137, 1);
+            this.txt_documento.CustomButton.Location = new System.Drawing.Point(133, 1);
             this.txt_documento.CustomButton.Name = "";
             this.txt_documento.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_documento.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -115,7 +117,7 @@ namespace RetoCntWinforms
             this.txt_documento.CustomButton.Visible = false;
             this.txt_documento.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_documento.Lines = new string[0];
-            this.txt_documento.Location = new System.Drawing.Point(318, 81);
+            this.txt_documento.Location = new System.Drawing.Point(334, 81);
             this.txt_documento.MaxLength = 32767;
             this.txt_documento.Name = "txt_documento";
             this.txt_documento.PasswordChar = '\0';
@@ -125,7 +127,7 @@ namespace RetoCntWinforms
             this.txt_documento.SelectionLength = 0;
             this.txt_documento.SelectionStart = 0;
             this.txt_documento.ShortcutsEnabled = true;
-            this.txt_documento.Size = new System.Drawing.Size(159, 23);
+            this.txt_documento.Size = new System.Drawing.Size(155, 23);
             this.txt_documento.TabIndex = 12;
             this.txt_documento.UseSelectable = true;
             this.txt_documento.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -136,7 +138,7 @@ namespace RetoCntWinforms
             this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(186, 79);
+            this.metroLabel1.Location = new System.Drawing.Point(202, 79);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(126, 25);
             this.metroLabel1.TabIndex = 13;
@@ -424,22 +426,8 @@ namespace RetoCntWinforms
             this.cb_sexo.FormattingEnabled = true;
             this.cb_sexo.ItemHeight = 23;
             this.cb_sexo.Items.AddRange(new object[] {
-            "AS",
-            "CC",
-            "CD",
-            "CE",
-            "CN",
-            "MS",
-            "NI",
-            "NV",
-            "PA",
-            "PE",
-            "RC",
-            "SC",
-            "SEX",
-            "SV",
-            "TEX",
-            "TI"});
+            "M",
+            "F"});
             this.cb_sexo.Location = new System.Drawing.Point(111, 232);
             this.cb_sexo.Name = "cb_sexo";
             this.cb_sexo.Size = new System.Drawing.Size(76, 29);
@@ -485,22 +473,8 @@ namespace RetoCntWinforms
             this.cb_dieta.FormattingEnabled = true;
             this.cb_dieta.ItemHeight = 23;
             this.cb_dieta.Items.AddRange(new object[] {
-            "AS",
-            "CC",
-            "CD",
-            "CE",
-            "CN",
-            "MS",
-            "NI",
-            "NV",
-            "PA",
-            "PE",
-            "RC",
-            "SC",
-            "SEX",
-            "SV",
-            "TEX",
-            "TI"});
+            "NO",
+            "SI"});
             this.cb_dieta.Location = new System.Drawing.Point(635, 232);
             this.cb_dieta.Name = "cb_dieta";
             this.cb_dieta.Size = new System.Drawing.Size(76, 29);
