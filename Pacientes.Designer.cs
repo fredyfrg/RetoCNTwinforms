@@ -89,6 +89,7 @@ namespace RetoCntWinforms
             this.bt_editar.TabIndex = 10;
             this.bt_editar.Text = "Editar";
             this.bt_editar.UseSelectable = true;
+            this.bt_editar.Click += new System.EventHandler(this.bt_editar_Click);
             // 
             // bt_eliminar
             // 
@@ -99,6 +100,7 @@ namespace RetoCntWinforms
             this.bt_eliminar.TabIndex = 11;
             this.bt_eliminar.Text = "Eliminar";
             this.bt_eliminar.UseSelectable = true;
+            this.bt_eliminar.Click += new System.EventHandler(this.bt_eliminar_Click);
             // 
             // txt_documento
             // 
@@ -569,6 +571,7 @@ namespace RetoCntWinforms
             this.Controls.Add(this.bt_guardar);
             this.Controls.Add(this.bt_editar);
             this.Controls.Add(this.bt_eliminar);
+            this.MaximizeBox = false;
             this.Name = "Pacientes";
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.Text = "Pacientes";
