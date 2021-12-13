@@ -27,6 +27,7 @@ namespace RetoCntWinforms
 
         }
 
+
         private void limpiartextos()
         {
             bt_guardar.Enabled = true;
@@ -48,6 +49,21 @@ namespace RetoCntWinforms
             txt_añosfumador.Visible = false;
         }
 
+        private void solonumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
         int PesoEstatura;
         private void calculaPesoEstatura()
         {

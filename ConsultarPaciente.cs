@@ -64,5 +64,11 @@ namespace RetoCntWinforms
         {
             buscarlictotal(txt_docpaciente.Text);
         }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            exportExcel expor = new exportExcel();
+            expor.exportaraexcel(dg_consulta);
+        }
     }
 }

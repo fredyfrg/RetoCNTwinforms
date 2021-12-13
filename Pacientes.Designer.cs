@@ -383,6 +383,7 @@ namespace RetoCntWinforms
             this.txt_edad.UseSelectable = true;
             this.txt_edad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_edad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_edad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // txt_estatura
             // 
@@ -415,6 +416,7 @@ namespace RetoCntWinforms
             this.txt_estatura.UseSelectable = true;
             this.txt_estatura.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_estatura.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_estatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // cb_sexo
             // 
@@ -461,6 +463,7 @@ namespace RetoCntWinforms
             this.txt_peso.UseSelectable = true;
             this.txt_peso.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_peso.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_peso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // cb_dieta
             // 
@@ -525,6 +528,7 @@ namespace RetoCntWinforms
             this.txt_añosfumador.Visible = false;
             this.txt_añosfumador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_añosfumador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_añosfumador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solonumeros);
             // 
             // metroButton1
             // 
