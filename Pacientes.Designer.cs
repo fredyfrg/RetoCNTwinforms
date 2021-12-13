@@ -121,7 +121,6 @@ namespace RetoCntWinforms
             this.txt_documento.MaxLength = 32767;
             this.txt_documento.Name = "txt_documento";
             this.txt_documento.PasswordChar = '\0';
-            this.txt_documento.ReadOnly = true;
             this.txt_documento.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_documento.SelectedText = "";
             this.txt_documento.SelectionLength = 0;
@@ -165,7 +164,6 @@ namespace RetoCntWinforms
             this.txt_nombres.MaxLength = 32767;
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.PasswordChar = '\0';
-            this.txt_nombres.ReadOnly = true;
             this.txt_nombres.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_nombres.SelectedText = "";
             this.txt_nombres.SelectionLength = 0;
@@ -269,13 +267,13 @@ namespace RetoCntWinforms
             // 
             this.lb_añosfumador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_añosfumador.AutoSize = true;
-            this.lb_añosfumador.Enabled = false;
             this.lb_añosfumador.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lb_añosfumador.Location = new System.Drawing.Point(435, 301);
             this.lb_añosfumador.Name = "lb_añosfumador";
             this.lb_añosfumador.Size = new System.Drawing.Size(127, 25);
             this.lb_añosfumador.TabIndex = 23;
             this.lb_añosfumador.Text = "Años Fumando";
+            this.lb_añosfumador.Visible = false;
             // 
             // metroLabel11
             // 
@@ -309,7 +307,6 @@ namespace RetoCntWinforms
             this.txt_apellidos.MaxLength = 32767;
             this.txt_apellidos.Name = "txt_apellidos";
             this.txt_apellidos.PasswordChar = '\0';
-            this.txt_apellidos.ReadOnly = true;
             this.txt_apellidos.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_apellidos.SelectedText = "";
             this.txt_apellidos.SelectionLength = 0;
@@ -342,7 +339,6 @@ namespace RetoCntWinforms
             this.txt_direccion.MaxLength = 32767;
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.PasswordChar = '\0';
-            this.txt_direccion.ReadOnly = true;
             this.txt_direccion.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_direccion.SelectedText = "";
             this.txt_direccion.SelectionLength = 0;
@@ -375,7 +371,6 @@ namespace RetoCntWinforms
             this.txt_edad.MaxLength = 32767;
             this.txt_edad.Name = "txt_edad";
             this.txt_edad.PasswordChar = '\0';
-            this.txt_edad.ReadOnly = true;
             this.txt_edad.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_edad.SelectedText = "";
             this.txt_edad.SelectionLength = 0;
@@ -408,7 +403,6 @@ namespace RetoCntWinforms
             this.txt_estatura.MaxLength = 32767;
             this.txt_estatura.Name = "txt_estatura";
             this.txt_estatura.PasswordChar = '\0';
-            this.txt_estatura.ReadOnly = true;
             this.txt_estatura.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_estatura.SelectedText = "";
             this.txt_estatura.SelectionLength = 0;
@@ -455,7 +449,6 @@ namespace RetoCntWinforms
             this.txt_peso.MaxLength = 32767;
             this.txt_peso.Name = "txt_peso";
             this.txt_peso.PasswordChar = '\0';
-            this.txt_peso.ReadOnly = true;
             this.txt_peso.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_peso.SelectedText = "";
             this.txt_peso.SelectionLength = 0;
@@ -487,27 +480,14 @@ namespace RetoCntWinforms
             this.cb_fumador.FormattingEnabled = true;
             this.cb_fumador.ItemHeight = 23;
             this.cb_fumador.Items.AddRange(new object[] {
-            "AS",
-            "CC",
-            "CD",
-            "CE",
-            "CN",
-            "MS",
-            "NI",
-            "NV",
-            "PA",
-            "PE",
-            "RC",
-            "SC",
-            "SEX",
-            "SV",
-            "TEX",
-            "TI"});
+            "NO",
+            "SI"});
             this.cb_fumador.Location = new System.Drawing.Point(276, 301);
             this.cb_fumador.Name = "cb_fumador";
             this.cb_fumador.Size = new System.Drawing.Size(76, 29);
             this.cb_fumador.TabIndex = 32;
             this.cb_fumador.UseSelectable = true;
+            this.cb_fumador.SelectedIndexChanged += new System.EventHandler(this.cb_fumador_SelectedIndexChanged);
             // 
             // txt_añosfumador
             // 
@@ -524,14 +504,13 @@ namespace RetoCntWinforms
             this.txt_añosfumador.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_añosfumador.CustomButton.UseSelectable = true;
             this.txt_añosfumador.CustomButton.Visible = false;
-            this.txt_añosfumador.Enabled = false;
             this.txt_añosfumador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txt_añosfumador.Lines = new string[0];
+            this.txt_añosfumador.Lines = new string[] {
+        "0"};
             this.txt_añosfumador.Location = new System.Drawing.Point(568, 303);
             this.txt_añosfumador.MaxLength = 32767;
             this.txt_añosfumador.Name = "txt_añosfumador";
             this.txt_añosfumador.PasswordChar = '\0';
-            this.txt_añosfumador.ReadOnly = true;
             this.txt_añosfumador.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_añosfumador.SelectedText = "";
             this.txt_añosfumador.SelectionLength = 0;
@@ -539,7 +518,9 @@ namespace RetoCntWinforms
             this.txt_añosfumador.ShortcutsEnabled = true;
             this.txt_añosfumador.Size = new System.Drawing.Size(69, 23);
             this.txt_añosfumador.TabIndex = 33;
+            this.txt_añosfumador.Text = "0";
             this.txt_añosfumador.UseSelectable = true;
+            this.txt_añosfumador.Visible = false;
             this.txt_añosfumador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_añosfumador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -587,6 +568,7 @@ namespace RetoCntWinforms
             this.Controls.Add(this.bt_eliminar);
             this.Name = "Pacientes";
             this.Text = "Pacientes";
+            this.Load += new System.EventHandler(this.Pacientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

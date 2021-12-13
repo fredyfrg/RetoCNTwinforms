@@ -16,6 +16,9 @@ namespace RetoCntWinforms
         public Pacientes()
         {
             InitializeComponent();
+
+            this.BorderStyle = MetroFormBorderStyle.FixedSingle;
+            this.ShadowType = MetroFormShadowType.AeroShadow;
         }
 
         private void bt_nuevo_Click(object sender, EventArgs e)
@@ -36,17 +39,110 @@ namespace RetoCntWinforms
             cb_dieta.Text = "NO";
             cb_fumador.Text = "NO";
             txt_añosfumador.Text = "";
-            lb_añosfumador.Enabled = false;
-            txt_añosfumador.Enabled = false;
+            lb_añosfumador.Visible = false;
+            txt_añosfumador.Visible = false;
         }
 
+        int PesoEstatura;
+        private void calculaPesoEstatura()
+        {
+            int peso = Convert.ToInt32(txt_peso.Text);
+            int estatura = Convert.ToInt32(txt_estatura.Text);
+            Double pesoestatura = (double) peso / estatura;
+            if (pesoestatura <= (0.25))
+            {
+                PesoEstatura = 0;
+            }
+            else if ((pesoestatura <= (0.50)))
+            {
+                PesoEstatura = 1;
+            }
+            else if ((pesoestatura <= (0.75)))
+            {
+                PesoEstatura = 2;
+            }
+            else if ((pesoestatura <= (1)))
+            {
+                PesoEstatura = 3;
+            }
+            else
+            {
+                PesoEstatura = 4;
+            }
+        }
+
+        Double Prioridad;
+        private void calculaPrioridad()
+        {
+            int edad = Convert.ToInt32(txt_edad.Text);
+            if (edad <= (5))
+            {
+                Prioridad = PesoEstatura + 3;
+            }
+            else if ((edad <= (12)))
+            {
+                Prioridad = PesoEstatura + 2;
+            }
+            else if ((edad <= (15)))
+            {
+                Prioridad = PesoEstatura + 1;
+            }
+            else if ((edad <= (40)))
+            {
+                if (cb_fumador.Text.Equals("SI"))
+                {
+                    Prioridad = (double) Convert.ToInt32(txt_añosfumador.Text) / 4 + 2;
+                }
+                else
+                {
+                    Prioridad = 2;
+                }
+            }
+            else
+            {
+                if ((cb_dieta.Text.Equals("SI")) && (edad >= 60 && edad <= 100))
+                {
+                    Prioridad = (double) edad / 20 + 4;
+                }
+                else
+                {
+                    Prioridad = (double) edad / 30 + 3;
+                }
+            }
+        }
+
+        Double Riesgo;
+        private void calculaRiesgo()
+        {
+            int edad = Convert.ToInt32(txt_edad.Text);
+            if (edad <= (40))
+            {
+                Riesgo = (double) edad * Prioridad / 100;
+            }
+            else
+            {
+                Riesgo = (double) edad * Prioridad / 100 + 5.3;
+            }
+        }
         private void bt_guardar_Click(object sender, EventArgs e)
         {
             try
             {
                 if ((!string.IsNullOrEmpty(txt_documento.Text)) && (!string.IsNullOrEmpty(txt_nombres.Text)) && (!string.IsNullOrEmpty(txt_apellidos.Text)) && (!string.IsNullOrEmpty(txt_edad.Text)) && (!string.IsNullOrEmpty(txt_peso.Text)) && (!string.IsNullOrEmpty(txt_estatura.Text)))
                 {
-                    
+                    calculaPesoEstatura();
+                    calculaPrioridad();
+                    calculaRiesgo();
+                    int status = basededatos.Insertar_Pacientes(txt_documento.Text, txt_nombres.Text, txt_apellidos.Text,txt_edad.Text,txt_direccion.Text,cb_sexo.Text,txt_peso.Text,txt_estatura.Text,cb_fumador.Text,txt_añosfumador.Text,cb_dieta.Text,PesoEstatura.ToString(),"Pendiente",Riesgo.ToString(),Prioridad.ToString());
+                    if (status == 1)
+                    {
+                        MessageBox.Show("Se ha registrado correctamente el paciente", "Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiartextos();
+                    }
+                    else if (status == 0)
+                    {
+                        MessageBox.Show("No se registrado el paciente", "Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -100,6 +196,26 @@ namespace RetoCntWinforms
             {
                 MessageBox.Show(ex.Message, "Error De Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cb_fumador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_fumador.Text.Equals("SI"))
+            {
+                lb_añosfumador.Visible = true;
+                txt_añosfumador.Text = "";
+                txt_añosfumador.Visible = true;
+            }
+            else
+            {
+                lb_añosfumador.Visible = false;
+                txt_añosfumador.Visible = false;
+            }
+        }
+
+        private void Pacientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

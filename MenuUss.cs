@@ -116,9 +116,12 @@ namespace RetoCntWinforms
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //Historico his = new Historico(Codus, nrol);
-            //his.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            //AbrirFormEnPanel(his);
+            Pacientes his = new Pacientes();
+            his.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(his);
+            //this.Dispose();
+            //Pacientes his = new Pacientes();
+            //his.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
