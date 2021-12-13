@@ -16,3 +16,4 @@ C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.MenuUss.reso
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.Logos.resources
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.Pacientes.resources
 C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.ConsultarPaciente.resources
+C:\Users\FRG\source\repos\RetoCntWinforms\obj\Debug\RetoCntWinforms.Riesgo.resources

@@ -83,5 +83,42 @@ namespace RetoCntWinforms
             return registro;
         }
 
+        public static String Menoredadpendiente()
+        {
+            String status = "0";
+            try
+            {
+                SqlCommand comando = new SqlCommand(String.Format("select top (1) documento + ' ' + nombres + ' ' + apellidos as Paciente from pacientes where estado='Pendiente' order by edad asc;"), basededatos.ObtenerConexion());
+                SqlDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    status = leer.GetString(0);
+                }
+            }
+            catch
+            {
+                status = "0";
+            }
+            return status;
+        }
+        public static String Mayoredadpendiente()
+        {
+            String status = "0";
+            try
+            {
+                SqlCommand comando = new SqlCommand(String.Format("select top (1) documento + ' ' + nombres + ' ' + apellidos as Paciente from pacientes where estado='Pendiente' order by edad desc;"), basededatos.ObtenerConexion());
+                SqlDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    status = leer.GetString(0);
+                }
+            }
+            catch
+            {
+                status = "0";
+            }
+            return status;
+        }
+
     }
 }

@@ -175,7 +175,12 @@ namespace RetoCntWinforms
 
         private void crearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Riesgo ries = new Riesgo();
+            ries.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(ries);
+            //this.Dispose();
+            //Riesgo r = new Riesgo();
+            //r.Show();
         }
 
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
