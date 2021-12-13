@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,9 @@ namespace RetoCntWinforms
 
         private void limpiartextos()
         {
+            bt_guardar.Enabled = true;
+            bt_editar.Enabled = false;
+            bt_eliminar.Enabled = false;
             txt_documento.Text = "";
             txt_nombres.Text = "";
             txt_apellidos.Text = "";
@@ -216,6 +220,36 @@ namespace RetoCntWinforms
         private void Pacientes_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            ConsultarPaciente consul = new ConsultarPaciente(txt_documento.Text);
+            consul.ShowDialog();
+            if (consul.DialogResult == DialogResult.OK)
+            {
+                String idpaciente = consul.dg_consulta.Rows[consul.dg_consulta.CurrentRow.Index].Cells[0].Value.ToString();
+                SqlCommand comando = new SqlCommand(String.Format("SELECT * FROM pacientes " +
+                    "where documento='" + idpaciente + "';"), basededatos.ObtenerConexion());
+                SqlDataReader MyReader = comando.ExecuteReader();
+                while (MyReader.Read())
+                {
+                    txt_documento.Text = MyReader["Documento"].ToString();
+                    txt_nombres.Text = MyReader["Nombres"].ToString();
+                    txt_apellidos.Text = MyReader["Apellidos"].ToString();
+                    txt_direccion.Text = MyReader["Direccion"].ToString();
+                    txt_edad.Text = MyReader["Edad"].ToString();
+                    txt_estatura.Text = MyReader["Estatura"].ToString();
+                    cb_sexo.Text = MyReader["Sexo"].ToString();
+                    txt_peso.Text = MyReader["Peso"].ToString();
+                    cb_dieta.Text = MyReader["Dieta"].ToString();
+                    cb_fumador.Text = MyReader["Fumador"].ToString();
+                    txt_añosfumador.Text = MyReader["Añosfumador"].ToString();
+                }
+                this.bt_guardar.Enabled = false;
+                this.bt_editar.Enabled = true;
+                this.bt_eliminar.Enabled = true;
+            }
         }
     }
 }

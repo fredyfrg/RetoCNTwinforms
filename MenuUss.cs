@@ -77,10 +77,6 @@ namespace RetoCntWinforms
         }
         private void RUR_Click(object sender, EventArgs e)
         {
-            //RUR rur = new RUR(Codus, nrol);
-            //rur.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            //AbrirFormEnPanel(rur);
-            ////AbrirFormEnPanel(new RUR(Codus, nrol));
         }
 
         private void MostrarFormLogo()
@@ -119,29 +115,18 @@ namespace RetoCntWinforms
             Pacientes his = new Pacientes();
             his.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(his);
-            //this.Dispose();
-            //Pacientes his = new Pacientes();
-            //his.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://192.168.0.8:82/hesk/");
-            //Pruebaa.Show(button8, button8.Width, 0);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            //Novedades nov = new Novedades(Codus, nrol);
-            //nov.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            //AbrirFormEnPanel(nov);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //EnvioCorreo env = new EnvioCorreo(Codus, nrol);
-            //env.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            //AbrirFormEnPanel(env);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -176,7 +161,6 @@ namespace RetoCntWinforms
 
         private void ubatéToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lbNodo.Text = "Ubaté";
         }
 
         private void MenuNodos_Opening(object sender, CancelEventArgs e)
@@ -191,18 +175,11 @@ namespace RetoCntWinforms
 
         private void crearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                //CrearUsuario us = new CrearUsuario();
-                //us.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-                //AbrirFormEnPanel(us);
             
         }
 
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-                //ModificarUsuarios us = new ModificarUsuarios(Codus, nrol);
-                //us.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-                //AbrirFormEnPanel(us);           
+        {           
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -223,7 +200,6 @@ namespace RetoCntWinforms
 
         private void MenuNodos_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            lbNodo.Text = e.ClickedItem.Text;
         }
 
         private void MenuNodos_Click_1(object sender, EventArgs e)

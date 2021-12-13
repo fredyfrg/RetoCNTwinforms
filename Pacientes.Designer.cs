@@ -533,11 +533,14 @@ namespace RetoCntWinforms
             this.metroButton1.TabIndex = 9;
             this.metroButton1.Text = "Pacientes";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // Pacientes
             // 
+            this.ApplyImageInvert = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackMaxSize = 50;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txt_añosfumador);
             this.Controls.Add(this.cb_fumador);
@@ -567,6 +570,7 @@ namespace RetoCntWinforms
             this.Controls.Add(this.bt_editar);
             this.Controls.Add(this.bt_eliminar);
             this.Name = "Pacientes";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.Text = "Pacientes";
             this.Load += new System.EventHandler(this.Pacientes_Load);
             this.ResumeLayout(false);
